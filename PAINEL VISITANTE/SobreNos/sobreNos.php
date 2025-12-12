@@ -50,15 +50,15 @@
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
-                        <h3>5.000+</h3>
-                        <p>Membros Transformados</p>
+                        <h3>1.000+</h3>
+                        <p>Membros</p>
                     </div>
                     <div class="stat-item">
-                        <h3>10</h3>
+                        <h3>15</h3>
                         <p>Unidades em Operação</p>
                     </div>
                     <div class="stat-item">
-                        <h3>50+</h3>
+                        <h3>100+</h3>
                         <p>Profissionais Especializados</p>
                     </div>
                     <div class="stat-item">
@@ -106,15 +106,15 @@
                     </div>
                     <h3>Diogo Scherrer</h3>
                     <p class="member-role">CEO & Fundador</p>
-                    <p>CEO da Tech Fit</p>
+                    <p>Criador do Painel de Usuários</p>
                 </div>
                 <div class="team-member">
                     <div class="member-photo">
                         <img src="Foto Henrique.png" alt="Henrique Delgado">
                     </div>
                     <h3>Henrique Delgado</h3>
-                    <p class="member-role">Diretora de Inovação</p>
-                    <p>CEO da Tech Fit</p>
+                    <p class="member-role">CEO & Fundador</p>
+                    <p>Criador do Painel Administrativo</p>
                 </div>
             </div>
         </div>

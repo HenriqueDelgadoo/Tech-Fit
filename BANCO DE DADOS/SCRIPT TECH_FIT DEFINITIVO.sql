@@ -221,6 +221,141 @@ INSERT INTO MODALIDADES (NOME_MODALIDADE, DESCRICAO_MODALIDADE) VALUES
 ('Funcional', 'Exercícios que simulam movimentos do dia a dia'),
 ('Alongamento', 'Aulas focadas em flexibilidade e relaxamento muscular');
 
+-- Inserindo funcionários (instrutores)
+INSERT INTO FUNCIONARIOS (NOME_FUNCIONARIO, LOGIN_REDE, NASCIMENTO_FUNCIONARIO, CPF_FUNCIONARIO, TELEFONE_FUNCIONARIO, DATA_ADMISSAO, SALARIO, CARGO, ENDERECO_FUNCIONARIO, EMAIL_FUNCIONARIO, SENHA_FUNCIONARIO, TURNO, ID_MODALIDADE) VALUES
+-- Instrutores de Musculação
+('Carlos Silva', 'carlos.silva', '1985-03-15', '111.222.333-01', '(11) 98888-1001', '2022-01-10', 3500.00, 'Instrutor', 'Rua das Flores, 100 - Centro', 'carlos.silva@techfit.com', SHA2('senha123', 256), 'MANHA', 1),
+('Ana Paula Santos', 'ana.santos', '1990-07-22', '111.222.333-02', '(11) 98888-1002', '2022-03-15', 3200.00, 'Instrutor', 'Av. Brasil, 200 - Jardins', 'ana.santos@techfit.com', SHA2('senha123', 256), 'TARDE', 1),
 
+-- Instrutor de Spinning
+('Ricardo Oliveira', 'ricardo.oliveira', '1988-11-05', '111.222.333-03', '(11) 98888-1003', '2023-02-20', 3400.00, 'Instrutor', 'Rua Augusta, 300 - Consolação', 'ricardo.oliveira@techfit.com', SHA2('senha123', 256), 'MANHA', 2),
+
+-- Instrutor de Zumba
+('Fernanda Costa', 'fernanda.costa', '1992-04-18', '111.222.333-04', '(11) 98888-1004', '2022-08-12', 3000.00, 'Instrutor', 'Al. Santos, 400 - Jardim Paulista', 'fernanda.costa@techfit.com', SHA2('senha123', 256), 'TARDE', 3),
+
+-- Instrutor de Pilates
+('Marcos Lima', 'marcos.lima', '1983-09-30', '111.222.333-05', '(11) 98888-1005', '2021-11-25', 3800.00, 'Instrutor', 'Rua Oscar Freire, 500 - Pinheiros', 'marcos.lima@techfit.com', SHA2('senha123', 256), 'MANHA', 4),
+
+-- Instrutor de CrossFit
+('Bruno Almeida', 'bruno.almeida', '1986-12-08', '111.222.333-06', '(11) 98888-1006', '2023-01-15', 3600.00, 'Instrutor', 'Av. Paulista, 600 - Bela Vista', 'bruno.almeida@techfit.com', SHA2('senha123', 256), 'TARDE', 5),
+
+-- Instrutor de Yoga
+('Patricia Mendes', 'patricia.mendes', '1984-06-25', '111.222.333-07', '(11) 98888-1007', '2022-05-10', 3300.00, 'Instrutor', 'Rua Haddock Lobo, 700 - Jardins', 'patricia.mendes@techfit.com', SHA2('senha123', 256), 'MANHA', 6),
+
+-- Instrutor de Natação
+('Roberto Carlos', 'roberto.carlos', '1979-02-14', '111.222.333-08', '(11) 98888-1008', '2020-09-18', 4000.00, 'Instrutor', 'Al. Campinas, 800 - Jardim Paulista', 'roberto.carlos@techfit.com', SHA2('senha123', 256), 'TARDE', 7),
+
+-- Instrutor de Boxe
+('Lucas Souza', 'lucas.souza', '1991-08-03', '111.222.333-09', '(11) 98888-1009', '2022-10-30', 3200.00, 'Instrutor', 'Rua Bela Cintra, 900 - Consolação', 'lucas.souza@techfit.com', SHA2('senha123', 256), 'NOITE', 8),
+
+-- Instrutor de Funcional
+('Julia Ribeiro', 'julia.ribeiro', '1993-01-20', '111.222.333-10', '(11) 98888-1010', '2023-03-05', 3100.00, 'Instrutor', 'Av. Europa, 1000 - Jardim Europa', 'julia.ribeiro@techfit.com', SHA2('senha123', 256), 'TARDE', 9),
+
+-- Instrutor de Alongamento
+('Sandra Nunes', 'sandra.nunes', '1982-05-12', '111.222.333-11', '(11) 98888-1011', '2021-07-22', 2900.00, 'Instrutor', 'Rua Estados Unidos, 1100 - Jardim América', 'sandra.nunes@techfit.com', SHA2('senha123', 256), 'MANHA', 10);
+
+
+-- ==============================================================
+-- INSERIR AULAS COM NOMES PADRONIZADOS E 2 HORÁRIOS POR DIA
+-- ==============================================================
+
+-- SEGUNDA-FEIRA
+INSERT INTO AULAS (NOME_AULA, ID_MODALIDADE, ID_INSTRUTOR, ID_UNIDADE, DIA_SEMANA, HORARIO_INICIO, DURACAO_MINUTOS, VAGAS) VALUES
+-- Manhã
+('Musculação', 1, 1, 1, 'SEG', '07:00:00', 60, 20),
+('Spinning', 2, 3, 1, 'SEG', '08:00:00', 45, 15),
+('Zumba', 3, 4, 1, 'SEG', '09:00:00', 50, 25),
+('Pilates', 4, 5, 1, 'SEG', '10:00:00', 50, 10),
+('CrossFit', 5, 6, 1, 'SEG', '11:00:00', 60, 12),
+('Yoga', 6, 7, 1, 'SEG', '06:30:00', 60, 15),
+
+-- Tarde/Noite
+('Musculação', 1, 2, 1, 'SEG', '18:00:00', 60, 20),
+('Spinning', 2, 3, 1, 'SEG', '19:00:00', 45, 15),
+('Zumba', 3, 4, 1, 'SEG', '20:00:00', 50, 25),
+('Pilates', 4, 5, 1, 'SEG', '17:00:00', 50, 10),
+('CrossFit', 5, 6, 1, 'SEG', '19:30:00', 60, 12),
+('Yoga', 6, 7, 1, 'SEG', '20:30:00', 60, 15);
+
+-- TERÇA-FEIRA
+INSERT INTO AULAS (NOME_AULA, ID_MODALIDADE, ID_INSTRUTOR, ID_UNIDADE, DIA_SEMANA, HORARIO_INICIO, DURACAO_MINUTOS, VAGAS) VALUES
+-- Manhã
+('Musculação', 1, 1, 1, 'TER', '07:00:00', 60, 20),
+('Spinning', 2, 3, 1, 'TER', '08:00:00', 45, 15),
+('Boxe', 8, 9, 1, 'TER', '09:00:00', 50, 12),
+('Natação', 7, 8, 2, 'TER', '10:00:00', 45, 8),
+('Treino Funcional', 9, 10, 1, 'TER', '11:00:00', 45, 15),
+
+-- Tarde/Noite
+('Musculação', 1, 2, 1, 'TER', '18:00:00', 60, 20),
+('Spinning', 2, 3, 1, 'TER', '19:00:00', 45, 15),
+('Boxe', 8, 9, 1, 'TER', '20:00:00', 50, 12),
+('Natação', 7, 8, 2, 'TER', '19:00:00', 45, 8),
+('Treino Funcional', 9, 10, 1, 'TER', '20:00:00', 45, 15);
+
+-- QUARTA-FEIRA
+INSERT INTO AULAS (NOME_AULA, ID_MODALIDADE, ID_INSTRUTOR, ID_UNIDADE, DIA_SEMANA, HORARIO_INICIO, DURACAO_MINUTOS, VAGAS) VALUES
+-- Manhã
+('Musculação', 1, 1, 1, 'QUA', '07:00:00', 60, 20),
+('Zumba', 3, 4, 1, 'QUA', '08:00:00', 50, 25),
+('CrossFit', 5, 6, 1, 'QUA', '09:00:00', 60, 12),
+('Yoga', 6, 7, 1, 'QUA', '10:00:00', 60, 15),
+('Alongamento', 10, 11, 1, 'QUA', '11:00:00', 30, 20),
+
+-- Tarde/Noite
+('Musculação', 1, 2, 1, 'QUA', '18:00:00', 60, 20),
+('Zumba', 3, 4, 1, 'QUA', '19:00:00', 50, 25),
+('CrossFit', 5, 6, 1, 'QUA', '20:00:00', 60, 12),
+('Yoga', 6, 7, 1, 'QUA', '20:30:00', 60, 15),
+('Alongamento', 10, 11, 1, 'QUA', '21:00:00', 30, 20);
+
+-- QUINTA-FEIRA
+INSERT INTO AULAS (NOME_AULA, ID_MODALIDADE, ID_INSTRUTOR, ID_UNIDADE, DIA_SEMANA, HORARIO_INICIO, DURACAO_MINUTOS, VAGAS) VALUES
+-- Manhã
+('Musculação', 1, 1, 1, 'QUI', '07:00:00', 60, 20),
+('Pilates', 4, 5, 1, 'QUI', '08:00:00', 50, 10),
+('Boxe', 8, 9, 1, 'QUI', '09:00:00', 50, 12),
+('Treino Funcional', 9, 10, 1, 'QUI', '10:00:00', 45, 15),
+
+-- Tarde/Noite
+('Musculação', 1, 2, 1, 'QUI', '18:00:00', 60, 20),
+('Pilates', 4, 5, 1, 'QUI', '19:00:00', 50, 10),
+('Boxe', 8, 9, 1, 'QUI', '20:00:00', 50, 12),
+('Treino Funcional', 9, 10, 1, 'QUI', '20:00:00', 45, 15);
+
+-- SEXTA-FEIRA
+INSERT INTO AULAS (NOME_AULA, ID_MODALIDADE, ID_INSTRUTOR, ID_UNIDADE, DIA_SEMANA, HORARIO_INICIO, DURACAO_MINUTOS, VAGAS) VALUES
+-- Manhã
+('Musculação', 1, 1, 1, 'SEX', '07:00:00', 60, 20),
+('Spinning', 2, 3, 1, 'SEX', '08:00:00', 45, 15),
+('Zumba', 3, 4, 1, 'SEX', '09:00:00', 50, 25),
+('CrossFit', 5, 6, 1, 'SEX', '10:00:00', 60, 12),
+
+-- Tarde/Noite
+('Musculação', 1, 2, 1, 'SEX', '18:00:00', 60, 20),
+('Spinning', 2, 3, 1, 'SEX', '19:00:00', 45, 15),
+('Zumba', 3, 4, 1, 'SEX', '20:00:00', 50, 25),
+('CrossFit', 5, 6, 1, 'SEX', '19:30:00', 60, 12);
+
+-- SÁBADO
+INSERT INTO AULAS (NOME_AULA, ID_MODALIDADE, ID_INSTRUTOR, ID_UNIDADE, DIA_SEMANA, HORARIO_INICIO, DURACAO_MINUTOS, VAGAS) VALUES
+-- Manhã
+('Musculação', 1, 1, 1, 'SAB', '08:00:00', 60, 20),
+('Spinning', 2, 3, 1, 'SAB', '09:00:00', 60, 20),
+('Zumba', 3, 4, 1, 'SAB', '10:00:00', 60, 30),
+('Yoga', 6, 7, 1, 'SAB', '11:00:00', 60, 15),
+
+-- Tarde (apenas algumas modalidades)
+('Musculação', 1, 2, 1, 'SAB', '14:00:00', 60, 15),
+('CrossFit', 5, 6, 1, 'SAB', '15:00:00', 75, 15);
+
+-- DOMINGO
+INSERT INTO AULAS (NOME_AULA, ID_MODALIDADE, ID_INSTRUTOR, ID_UNIDADE, DIA_SEMANA, HORARIO_INICIO, DURACAO_MINUTOS, VAGAS) VALUES
+-- Manhã
+('Musculação', 1, 1, 1, 'DOM', '09:00:00', 60, 15),
+('Yoga', 6, 7, 1, 'DOM', '10:00:00', 75, 15),
+('Spinning', 2, 3, 1, 'DOM', '11:00:00', 45, 15);
+
+ALTER TABLE PAGAMENTOS MODIFY COLUMN TIPO_PAGAMENTO ENUM('DINHEIRO','CREDITO','DEBITO','PIX','TROCA_PLANO') NOT NULL;
 
 
